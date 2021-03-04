@@ -1,0 +1,37 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "Backend API for Blog application",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest --env=node",
+    "lint": "eslint ./src/** ./tests/**",
+    "deploy": "sls deploy --config serverless.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATDaniel/blog-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ATDaniel/blog-api/issues"
+  },
+  "homepage": "https://github.com/ATDaniel/blog-api#readme",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-semistandard": "^15.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "serverless-offline": "^6.8.0"
+  },
+  "dependencies": {
+    "aws-serverless-express": "^3.4.0",
+    "express": "^4.17.1",
+    "semistandard": "^16.0.0",
+    "serverless": "^2.28.6"
+  }
+}
