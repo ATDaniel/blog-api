@@ -1,9 +1,10 @@
 /* eslint-disable space-before-function-paren */
-const express = require('express');
-const awsServerless = require('aws-serverless-express');
-const awsServerlessMiddleware = require('aws-serverless-express/middleware');
+import express from 'express';
+import awsServerless from 'aws-serverless-express';
+import awsServerlessMiddleware from 'aws-serverless-express/middleware';
+import reflect from 'reflect-metadata';
 
-const api = require('./api');
+import routes from './api';
 // const { errorHandler } = require('./error-handler');
 // const { logger } = require('./util');
 // const settings = require('./settings');
@@ -15,7 +16,7 @@ async function initialize() {
 
   application.use(express.json());
   application.use(awsServerlessMiddleware.eventContext());
-  application.use(api.routes);
+  application.use(routes);
   // application.use(errorHanlder);
   // application.logger = logger;
   return application;
